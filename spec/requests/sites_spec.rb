@@ -5,7 +5,7 @@ RSpec.describe "Sites", type: :request do
 
     # Params comes from github.com/web_hooks
     let!(:site) do
-      {site: {url: 'https://www.limlessons.com'}}
+      {site: {url: 'https://nywton.herokuapp.com'}}
     end
 
     let!(:invalid_site) do

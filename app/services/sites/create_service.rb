@@ -4,14 +4,14 @@ require 'open-uri'
 require 'nokogiri'
 module Sites
   class CreateService
-    def self.call(params)
-      fetch_site(params[:url])
+    def self.call(url)
+      fetch_site(url)
     end
 
     private
       def self.fetch_site(url)
         site = Site.create(url: url)
-        doc = Nokogiri::HTML(open(url))
+        doc = Nokogiri::HTML.parse(open(url))
 
         hrefs = doc.css("a").map do |link|
           if (href = link.attr("href")) && !href.empty?

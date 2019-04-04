@@ -8,7 +8,7 @@ class SitesController < ApplicationController
 
   # POST /sites
   def create
-    @site = Site::CreateService.call(params)
+    @site = Sites::CreateService.call(site_params[:url])
 
     if @site.id
       render json: @site, status: :created, location: @site
