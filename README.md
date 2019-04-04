@@ -1,24 +1,30 @@
-# README
+# Site indexer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Site indexer is an application that index h1, h2, h3 and links elements from an URL. to Github Events via webhooks and expose by an api for later use.
 
-Things you may want to cover:
+Example: https://site-indexer.herokuapp.com
+You may read the Json API **documentation** at: http://site-indexer.herokuapp.com/apidoc/index.html
 
 * Ruby version
-
-* System dependencies
-
+    - 2.5.1
+* Rails version
+     - 5.2.3
+* Database
+    - The project is default configured with **postgresql** database and **gem pg**
+    - You can change the database adapter on **database.yml**. Remember to add the required dependencies
 * Configuration
-
-* Database creation
-
-* Database initialization
+    - Rename ".env.sample" to ".env"
+    - Change database variables (DB_USERNAME, DB_PASSWORD) 
+    - Run docker-compose
+* Database configuration:
+    
+    ````
+    $ docker-compose up #for docker users
+    $ rake db:create
+    $ rake db:migrate
 
 * How to run the test suite
+    ````
+    $ rspec
+    
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
