@@ -1,12 +1,5 @@
 class SitesController < ApplicationController
-  before_action :set_site, only: [:show, :update, :destroy]
 
-  # GET /sites
-  def index
-    @sites = Site.all
-
-    render json: @sites
-  end
 
   # GET /sites/1
   def show
@@ -15,9 +8,9 @@ class SitesController < ApplicationController
 
   # POST /sites
   def create
-    @site = Site.new(site_params)
+    @site = Site::CreateService.call(params)
 
-    if @site.save
+    if @site.id
       render json: @site, status: :created, location: @site
     else
       render json: @site.errors, status: :unprocessable_entity

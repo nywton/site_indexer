@@ -22,6 +22,11 @@ You may read the Json API **documentation** at: http://site-indexer.herokuapp.co
     $ docker-compose up #for docker users
     $ rake db:create
     $ rake db:migrate
+    
+* Example request:
+    
+    ````
+    $ curl -d "url=https://nywton.herokuapp.com" -X POST -H "Content-Type: application/application/json" http://localhost:3000/sites
 
 * How to run the test suite
     ````
