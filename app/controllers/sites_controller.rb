@@ -1,4 +1,4 @@
-class SitesController < JSONAPI::ResourceController
+class SitesController < ApplicationController
 
   # POST /sites
   def create
