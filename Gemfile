@@ -13,6 +13,11 @@ gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 # https://github.com/cerebris/jsonapi-resources
 gem 'jsonapi-resources'
+
+gem 'rswag'
+gem 'rswag-api'
+gem 'rswag-ui'
+
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -23,6 +28,8 @@ end
 group :development, :test do
   # https://github.com/rspec/rspec-rails
   gem 'rspec-rails', '~> 3.7'
+
+  gem 'rswag-specs'
   # https://github.com/thoughtbot/shoulda-matchers
   gem 'shoulda-matchers', '~> 3.1'
   # https://github.com/thoughtbot/factory_bot_rails

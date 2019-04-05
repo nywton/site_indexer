@@ -17,27 +17,27 @@
  * @apiSuccessExample Response (example):
  * HTTP/1.1 200 OK
  *  {
-   "data":[
-      {
-         "id":"1",
-         "type":"sites",
-         "links":{
-            "self":"http://localhost:3000/sites/1"
-         },
-         "attributes":{
-            "url":"https://nywton.herokuapp.com"
-         },
-         "relationships":{
-            "tags":{
-               "links":{
-                  "self":"http://localhost:3000/sites/1/relationships/tags",
-                  "related":"http://localhost:3000/sites/1/tags"
-               }
-            }
-         }
-      }
-   ]
-}
+ *  "data":[
+ *     {
+ *        "id":"1",
+ *        "type":"sites",
+ *        "links":{
+ *           "self":"http://localhost:3000/sites/1"
+ *        },
+ *        "attributes":{
+ *           "url":"https://nywton.herokuapp.com"
+ *        },
+ *        "relationships":{
+ *           "tags":{
+ *              "links":{
+ *                 "self":"http://localhost:3000/sites/1/relationships/tags",
+ *                 "related":"http://localhost:3000/sites/1/tags"
+ *              }
+ *           }
+ *        }
+ *     }
+ *  ]
+ *  }
  *
  *  @apiSampleRequest http://site-indexer.herokuapp.com/sites
  */
