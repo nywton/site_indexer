@@ -23,10 +23,15 @@ You may read the Json API **documentation** at: http://site-indexer.herokuapp.co
     $ rake db:create
     $ rake db:migrate
     
-* Example request:
+* Example Index Site Request:
     
     ````
     $ curl -d '{"data": {"type":"sites", "attributes":{"url":"https://nywton.herokuapp.com"}}}' -X POST -H "Content-Type: application/vnd.api+json" http://localhost:3000/site
+
+* Example get Sites:
+    
+    ````
+    $ curl http://localhost:3000/sites
 
 * How to run the test suite
     ````
