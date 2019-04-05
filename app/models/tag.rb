@@ -1,3 +1,3 @@
 class Tag < ApplicationRecord
-  belongs_to :site, dependent: :destroy
+  belongs_to :site
 end
