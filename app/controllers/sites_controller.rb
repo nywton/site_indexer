@@ -1,4 +1,4 @@
-class SitesController < ApplicationController
+class SitesController < JSONAPI::ResourceController
 
   # POST /sites
   def create
@@ -9,4 +9,10 @@ class SitesController < ApplicationController
       render json: JSONAPI::ResourceOperationResult.new(:created, @site), status: :created
     end
   end
+
+  def show
+    params[:include] = "tags" if params[:include].nil?
+    super
+  end
+
 end
