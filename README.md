@@ -26,7 +26,7 @@ You may read the Json API **documentation** at: http://site-indexer.herokuapp.co
 * Example request:
     
     ````
-    $ curl -d "url=https://nywton.herokuapp.com" -X POST -H "Content-Type: application/application/json" http://localhost:3000/sites
+    $ curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"site":{"url": "https://nywton.herokuapp.com"}}' http://localhost:3000/sites
 
 * How to run the test suite
     ````

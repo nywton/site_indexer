@@ -5,7 +5,8 @@ RSpec.describe "Sites", type: :request do
 
     # Params comes from github.com/web_hooks
     let!(:site) do
-      {site: {url: 'https://nywton.herokuapp.com'}}
+      # {site: {url: 'https://nywton.herokuapp.com'}}
+      {"data": {"type":"sites", "attributes":{"url":"https://nywton.herokuapp.com"}}}
     end
 
     let!(:invalid_site) do
@@ -14,8 +15,13 @@ RSpec.describe "Sites", type: :request do
 
     context 'with valid params' do
       it 'should return correct http status' do
-        post sites_path, params: site, headers: { 'Accept': 'application/json' }
+        post sites_path, params: site.to_json, headers: { 'Content-Type': 'application/vnd.api+json'}
         expect(response).to have_http_status(:created)
+      end
+
+      it 'should return response body' do
+        post sites_path, params: site.to_json, headers: { 'Content-Type': 'application/vnd.api+json'}
+        expect(response.body).to include('resource', 'id', 'url')
       end
     end
 

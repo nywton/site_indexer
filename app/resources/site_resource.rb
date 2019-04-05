@@ -1,4 +1,4 @@
 class SiteResource < JSONAPI::Resource
-  attributes :id, :url
+  attributes :url
   has_many :tags
 end
