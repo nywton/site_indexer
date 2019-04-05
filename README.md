@@ -1,6 +1,6 @@
 # Site indexer
 
-Site indexer is an application that index h1, h2, h3 and links elements from an URL. to Github Events via webhooks and expose by an api for later use.
+Site indexer is an application that index h1, h2, h3 and links elements from an URL.
 
 Example: https://site-indexer.herokuapp.com
 You may read the Json API **documentation** at: http://site-indexer.herokuapp.com/apidoc/index.html
