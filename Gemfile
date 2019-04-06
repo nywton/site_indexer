@@ -13,7 +13,8 @@ gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 # https://github.com/cerebris/jsonapi-resources
 gem 'jsonapi-resources'
-
+#https://github.com/cyu/rack-cors
+gem 'rack-cors'
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
