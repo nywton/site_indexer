@@ -23,7 +23,7 @@ module SiteIndexer
     config.load_defaults 5.2
     config.middleware.use ActionDispatch::Flash
     config.action_dispatch.default_headers = {
-       'Access-Control-Allow-Origin' => 'http://site-indexer-api.herokuapp.com',
+       'Access-Control-Allow-Origin' => '*',
        'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
     }
     # Settings in config/environments/* take precedence over those specified here.
