@@ -10,7 +10,8 @@ module Sites
 
     private
       def self.fetch_site(url)
-        site = Site.create(url: url)
+        site = Site.find_or_initialize(url: url)
+	site.save
         doc = Nokogiri::HTML.parse(open(url))
 
         hrefs = doc.css("a").map do |link|
